@@ -1,0 +1,42 @@
+.place-order {
+    margin-top: 100px;
+    align-items: flex-start; /* Changed "start" to "flex-start" for proper alignment */
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px); /* Corrected "max-width" syntax */
+}
+
+.place-order-left .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+}
+
+.place-order-left .multi-fields {
+    display: flex;
+    gap: 10px;
+}
+
+/* Corrected selector for .place-order-right */
+.place-order-right {
+    width: 100%;
+    max-width: max(40%, 500px); /* Fixed the missing comma in max-width */
+}
+
+.place-order .cart-total button {
+    margin-top: 10px;
+}

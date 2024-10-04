@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #4A90E2;
+  --secondary-color: #5C6BC0;
+  --text-color: #333333;
+  --background-color: #F7F9FC;
+  --input-border: #E0E7FF;
+  --button-hover: #3A7BD5;
+  --shadow-color: rgba(74, 144, 226, 0.2);
+}
+
+.login-popup {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: grid;
+  top: 0;
+  left: 0;
+}
+
+.login-popup-container {
+  place-self: center;
+  width: max(25vw, 350px);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 30px 35px;
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease-in-out, floatUp 0.5s ease-in-out;
+  color: var(--text-color);
+  box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.login-popup-title img {
+  width: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.login-popup-title img:hover {
+  transform: rotate(90deg);
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-inputs input {
+  outline: none;
+  border: 2px solid var(--input-border);
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--shadow-color);
+}
+
+.login-popup-container button {
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-popup-container button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.login-popup-condition input[type="checkbox"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+.login-popup-condition p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.login-popup p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.login-popup p span {
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-popup p span:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
+}

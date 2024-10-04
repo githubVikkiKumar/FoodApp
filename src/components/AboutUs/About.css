@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .about-us {
+    background-color: #f8f9fa;
+    color: #343a40;
+  }
+  
+  .about-us-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+  }
+  
+  .about-us-content {
+    padding: 20px;
+  }
+  
+  .intro {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .intro h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .intro img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  .mission {
+    margin: 20px 0;
+  }
+  
+  .mission h2 {
+    font-size: 28px;
+  }
+  
+  .team {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .team-member {
+    margin: 15px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+  }
+  
+  .about-us-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  

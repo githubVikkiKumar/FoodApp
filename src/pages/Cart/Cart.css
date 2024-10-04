@@ -1,0 +1,206 @@
+/* Main cart container */
+.cart {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+/* Cart header row */
+.cart-item-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    color: #555;
+    font-size: 1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: bold;
+    background-color: #fafafa;
+    border-radius: 10px 10px 0 0;
+}
+  
+/* Cart items row */
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    padding: 20px 0;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.cart-items-title:hover {
+    background-color: #f4f4f4;
+}
+  
+/* Cart item image */
+.cart-items-items img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+  
+/* Horizontal line */
+.cart hr {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: 20px 0;
+}
+  
+/* Remove item cross */
+.cart-items-title .cross {
+    cursor: pointer;
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.cart-items-title .cross:hover {
+    color: #e63946;
+}
+  
+/* Cart total section */
+.cart-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+  
+/* Cart total summary */
+.cart-total {
+    flex: 0.6;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-total h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.cart-total-details b {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cart-total button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-total button:hover {
+    background-color: #e63946;
+}
+  
+/* Promo code section */
+.cart-promocode {
+    flex: 0.35;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-promocode p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.cart-promocode-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart-promocode-input input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.cart-promocode-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cart-promocode-input button:hover {
+    background-color: black;
+    padding: 12px 5px;
+    width: max(10vw, 150px);
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 750px) {
+    /* Stack cart total and promo code sections vertically */
+    .cart-bottom {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    /* Align promo code section to the left */
+    .cart-promocode {
+        justify-content: flex-start;
+    }
+
+    /* Reduce padding and font size for cart details */
+    .cart-total h2, .cart-total-details, .cart-total button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .cart-promocode-input input, .cart-promocode-input button {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust grid layout for cart items */
+    .cart-item-title, .cart-items-title {
+        grid-template-columns: 1fr 1fr 1fr 0.5fr;
+        font-size: 0.9rem;
+    }
+
+    /* Resize cart item image */
+    .cart-items-items img {
+        width: 50px;
+        height: 50px;
+    }
+}
